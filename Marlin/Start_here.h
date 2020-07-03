@@ -6,25 +6,25 @@
 // Youtube             "https://youtube.com/verta"
 // Discord             "https://discord.gg/brq79WQ"
 // GitHub              "https://github.com/Vertabreak/Marlin"
-// Patreon             "https://www.patreon.com/vertabreaker" 
+// Patreon             "https://www.patreon.com/vertabreaker"
 // Buy me a coffee     "https://ko-fi.com/vertabreaker"
 
 //-------------------------------------------------------------------------------------------------------------------------
 // Remove // to enable - add // to disable                                                                                |
 // Complete steps below > build > flash, its that simple there are hundreds of combinations & more being added.           |
 // Post flash initilize the eeprom - M502+M500 or menu option load failsafe+store settings.                               |
-// Guides on my youtube, when you watch/like/subscribe/share it helps support the channel and helps it grow.              | 
+// Guides on my youtube, when you watch/like/subscribe/share it helps support the channel and helps it grow.              |
 // Looking for help or have a question? join us on the discord.                                                           |
 // Confirmed to compile with vscode and the platformio extension                                                          |
 // Sometimes Vscode gets weird click the trashcan clean button and restart vscode it often fixs the issue.                |
-// If you succeeded compile, all "problems" should be ignored only a real errors mean anything.                           |  
+// If you succeeded compile, all "problems" should be ignored only a real errors mean anything.                           |
 //-------------------------------------------------------------------------------------------------------------------------
 
 //(Step 1) enable 1 base model/frame
 //GT2560 Boards - vscode: default_envs = mega2560 in platformio.ini
 #define GTA10       // A10 & Variants
 //#define GTA20       // A20 & Variants
-//#define MECREATOR2  // Mecreator2 & Variants     
+//#define MECREATOR2  // Mecreator2 & Variants
 //#define I3PROA      // I3ProA & Variants
 //#define I3PROB      // I3PROB & Variants
 //#define I3PROC      // I3PROC & Variants
@@ -38,7 +38,7 @@
 //#define GTD200      // D200 & Variants - testing
 
 //Melzi Boards - vscode: default_envs = melzi in platformio.ini
-//#define ENDER3      // ENDER3 & Variants - testing 
+//#define ENDER3      // ENDER3 & Variants - testing
 
 //----------------------------------------------------------------------------------------------------
 //Based on https://github.com/codiac2600/SKR-MK3s-V1.4-Beta
@@ -49,12 +49,12 @@
 //vscode: default_envs = #default_envs = LPC1769
 //#define BEAR_TURBO  // Bear MK3/MK3s Turbo & Variants - testing
 
-//(Bear & Bear_Turbo)Switch from Bear MK3 to MK2.5 
+//(Bear & Bear_Turbo)Switch from Bear MK3 to MK2.5
 //#define MK25        // Enable to set 12V for Bear MK2.5
 
 //(Bear & Bear_Turbo)Z mod pick only 1 or none for stock
-//#define Z320        // Enable to change Zmax to 320  
-//#define Z420        // Enable to change Zmax to 420 
+//#define Z320        // Enable to change Zmax to 320
+//#define Z420        // Enable to change Zmax to 420
 
 //(Bear & Bear_Turbo)Extruder mod pick only 1 or none for stock
 //#define BMG18       // BMG E 1.8 stepper
@@ -68,9 +68,9 @@
 //(Step 2) enable 1 if you have mixing or multi extruder (Variant)
 //#define MIX      // Enable Mixing    2 in 1 - 1 Virtual Stepper (M)
 //#define MIXT     // Enable Mixing    3 in 1 - 1 Virtual Stepper (T)
-//#define CYCLOPS  // Enable Cyclops   2 in 1 - 2 Physical Stepper (C) 
+//#define CYCLOPS  // Enable Cyclops   2 in 1 - 2 Physical Stepper (C)
 //#define CYCLOPST // Enable Cyclops   3 in 1 - 3 Physical Stepper (CT)
-//#define DUALEX   // 2 Extruders      2 in 2 - 2 Physical Stepper (D) 
+//#define DUALEX   // 2 Extruders      2 in 2 - 2 Physical Stepper (D)
 //#define TRIEX    // 3 Extruders      3 in 3 - 3 Physical Stepper (E3)
 
 //---------------
@@ -104,12 +104,12 @@
 //#define TMC5160U   // Enable TMC5160 UART/SPI all drivers
 
 //Custom driver set if none selected above
-//#define CUSTOMDRIVERS     // Define Custom drivers 
+//#define CUSTOMDRIVERS     // Define Custom drivers
 #if ENABLED (CUSTOMDRIVERS)
    //'A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160'
    //'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE'
    //'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE'
-   
+
  // Timings
    #define X_DRIVER_TYPE  TMC2208_STANDALONE
    #define Y_DRIVER_TYPE  TMC2208_STANDALONE
@@ -127,7 +127,7 @@
 #endif
 
 //(Probe Mod) enable 1 (Mod) probe type none = manual (stock) - No GTM32 probe support yet
-//#define TOUCHPROBE  // Enable Touch Type Probe (Bltouch / 3Dtouch)
+#define TOUCHPROBE  // Enable Touch Type Probe (Bltouch / 3Dtouch)
 //#define FMP         // Enable Fixed Mounted Type Probe (Capacitive / Inductive)
 //#define PINDA       // Enable Pinda Type Probe
 
@@ -143,7 +143,7 @@
 //(Fan Mod) enable 1 (Mod) to override default FAN PWM
 //#define MECHFAN     // Enable Mechatronics fan 80 pwm
 //#define RADIALFAN   // Enable Radial fan 50 pwm
-//#define BEAR_FAN    // Enable fan 20 pwm on when not a bear model 
+//#define BEAR_FAN    // Enable fan 20 pwm on when not a bear model
 
 //------------------------------
 //Optional settings & features |
@@ -152,13 +152,13 @@
 
 //Optional features
 //#define PLR              // Enabled power loss resume - Only functions from SDcard
-//#define RUNOUT           // Enable filament runout sensor - Only If you have them and want to use them
+#define RUNOUT           // Enable filament runout sensor - Only If you have them and want to use them
 //#define BEDCLIPS         // Enable to avoid bed clips (manual or probe) - Only If you have them and want to use them
 //#define CASELIGHT        // Enable case light menu if board has led header.
 
 //Disable to save resources on hardware you dont use
 //#define NOSCREEN         // Disable the screen - Save alot of resources good for octoprint users
-//#define NOSDCARD         // Disable the sdcard slot - Save alot of resources good for octoprint users 
+//#define NOSDCARD         // Disable the sdcard slot - Save alot of resources good for octoprint users
 
 //Used to switch the default board of the model selected in step 1
 //#define CUSTOMBOARD // Enable Custom Board
@@ -170,12 +170,12 @@
 //#define NEWMODEL // New model
 
 //-----------------------------
-//logic to reduce setup steps | 
+//logic to reduce setup steps |
 //-----------------------------
 
-//Multiextruder 
+//Multiextruder
 #if ANY(MIX, MIXT, CYCLOPS, CYCLOPST, DUALEX, TRIEX)
-  #define MULTIEXTRUDER 
+  #define MULTIEXTRUDER
 #endif
 
 //TMC drivers
@@ -229,15 +229,15 @@
   //#define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET)
 #endif
 
-//Probe offset logic - suggest you mesure yours and adjust as needed. 
+//Probe offset logic - suggest you mesure yours and adjust as needed.
 #if DISABLED (MULTIEXTRUDER) && ANY(TOUCHPROBE, FMP) && ANY (GTA10, GTA20)
-  #define NOZZLE_TO_PROBE_OFFSET { -38, 5, 0 } // Nozzle To Probe offset XYZ A10/A20 - this is what it is on my test machines yours could differ 
+  #define NOZZLE_TO_PROBE_OFFSET { -38, 5, 0 } // Nozzle To Probe offset XYZ A10/A20 - this is what it is on my test machines yours could differ
 #elif ENABLED (MULTIEXTRUDER) && ANY(TOUCHPROBE, FMP) && ANY (GTA10, GTA20)
   #define NOZZLE_TO_PROBE_OFFSET { -40, 0, 0 }  // Nozzle To Probe offset XYZ A10M+T/A20M+T - this is what it is on my test machines yours could differ
 #elif ANY (BEAR, BEAR_TURBO) && ENABLED (TOUCHPROBE)
-  #define NOZZLE_TO_PROBE_OFFSET { 26, 10, 0 } 
+  #define NOZZLE_TO_PROBE_OFFSET { 26, 10, 0 }
 #elif ANY (BEAR, BEAR_TURBO)
-  #define NOZZLE_TO_PROBE_OFFSET { 23, 5, 0 }  
+  #define NOZZLE_TO_PROBE_OFFSET { 23, 5, 0 }
 #else
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
 #endif
@@ -251,43 +251,43 @@
   #define Y_MIN_POS -5   //- this is what it is on my test machines yours could differ
 #elif ANY (BEAR, BEAR_TURBO)
   #define X_MIN_POS 0
-  #define Y_MIN_POS -4  
-#elif ENABLED (NEWMODEL) 
-  #define X_MIN_POS 0        
-  #define Y_MIN_POS 0  
+  #define Y_MIN_POS -4
+#elif ENABLED (NEWMODEL)
+  #define X_MIN_POS 0
+  #define Y_MIN_POS 0
 #else
-  #define X_MIN_POS 0        
-  #define Y_MIN_POS 0      
+  #define X_MIN_POS 0
+  #define Y_MIN_POS 0
 #endif
 
 //Steps selection logic
 #if DISABLED (NEWMODEL)
 #if DISABLED (MULTIEXTRUDER) && DISABLED (BEAR) && DISABLED (BEAR_TURBO)
   #define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 400, 95 }  // ungeared extruder found on a10/a20/a30/i3pro
-  //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 95 } 
+  //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 95 }
   //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 2560, 95 } // M8 Z rod steps 2560 found on old I3pro
 #elif ENABLED (MULTIEXTRUDER) && DISABLED (BEAR) && DISABLED (BEAR_TURBO)
   #define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 400, 430 } // geared extruder found on M & T variants
-  //#define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 800, 430 } 
-  //#define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 2560, 430 } // M8 Z rod steps 2560 found on old I3pro 
+  //#define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 800, 430 }
+  //#define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 2560, 430 } // M8 Z rod steps 2560 found on old I3pro
 #endif
 
-#if ENABLED (GREYBEAR) && ENABLED (BMG18) && ANY (BEAR, BEAR_TURBO) 
+#if ENABLED (GREYBEAR) && ENABLED (BMG18) && ANY (BEAR, BEAR_TURBO)
     #define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 400, 830 }  // BMG1.8 + grey
-#elif ENABLED (BMG18) && ANY (BEAR, BEAR_TURBO)  
+#elif ENABLED (BMG18) && ANY (BEAR, BEAR_TURBO)
     #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 830 }  // BMG1.8
 #elif ENABLED (GREYBEAR) && ENABLED (BMG9) && ANY (BEAR, BEAR_TURBO)
     #define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 400, 1660 }  // BMG 0.9 +grey
-#elif ENABLED (BMG9) && ANY (BEAR, BEAR_TURBO) 
+#elif ENABLED (BMG9) && ANY (BEAR, BEAR_TURBO)
     #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 1660 }  // BMG 0.9
-#elif ENABLED (GREYBEAR) && ANY (BEAR, BEAR_TURBO) 
-    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 400, 280 }  // stock + grey  
-#elif ANY (BEAR, BEAR_TURBO) 
+#elif ENABLED (GREYBEAR) && ANY (BEAR, BEAR_TURBO)
+    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 400, 280 }  // stock + grey
+#elif ANY (BEAR, BEAR_TURBO)
     #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 280 }  //stock
 #endif
 #endif
 
-#if ENABLED (NEWMODEL) 
+#if ENABLED (NEWMODEL)
   #define DEFAULT_AXIS_STEPS_PER_UNIT  { 80, 80, 400, 95 }
 #endif
 
@@ -296,10 +296,10 @@
   #define INVERTE     // Invert E direction disabe if wrong direction - Geared exturders invert E (stock)
 #else
   //#define INVERTE  // Enable to force on
-#endif 
+#endif
 
 #if ENABLED (TMCCHIPS)
   #define INVERTXYZ   // Invert XYZ direction disable if wrong direction.
 #else
-  //#define INVERTXYZ // Enable to force on 
+  //#define INVERTXYZ // Enable to force on
 #endif
