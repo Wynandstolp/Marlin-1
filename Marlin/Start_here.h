@@ -247,8 +247,8 @@
   #define X_MIN_POS -1   //- this is what it is on my test machines yours could differ
   #define Y_MIN_POS -7   //- this is what it is on my test machines yours could differ
 #elif ANY (GTA10, GTA20, GTA30)
-  #define X_MIN_POS -10  //- this is what it is on my test machines yours could differ
-  #define Y_MIN_POS -5   //- this is what it is on my test machines yours could differ
+  #define X_MIN_POS -1  //- this is what it is on my test machines yours could differ
+  #define Y_MIN_POS -7   //- this is what it is on my test machines yours could differ
 #elif ANY (BEAR, BEAR_TURBO)
   #define X_MIN_POS 0
   #define Y_MIN_POS -4
