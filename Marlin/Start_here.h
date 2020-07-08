@@ -231,7 +231,7 @@
 
 //Probe offset logic - suggest you mesure yours and adjust as needed.
 #if DISABLED (MULTIEXTRUDER) && ANY(TOUCHPROBE, FMP) && ANY (GTA10, GTA20)
-  #define NOZZLE_TO_PROBE_OFFSET { -38, 5, 0 } // Nozzle To Probe offset XYZ A10/A20 - this is what it is on my test machines yours could differ
+  #define NOZZLE_TO_PROBE_OFFSET { -40, 0, 0 } // Nozzle To Probe offset XYZ A10/A20 - this is what it is on my test machines yours could differ
 #elif ENABLED (MULTIEXTRUDER) && ANY(TOUCHPROBE, FMP) && ANY (GTA10, GTA20)
   #define NOZZLE_TO_PROBE_OFFSET { -40, 0, 0 }  // Nozzle To Probe offset XYZ A10M+T/A20M+T - this is what it is on my test machines yours could differ
 #elif ANY (BEAR, BEAR_TURBO) && ENABLED (TOUCHPROBE)
