@@ -1606,8 +1606,8 @@
   #define Y_BED_SIZE 165
   #define Z_MAX_POS 155
 #elif ENABLED (GTA10)
-  #define X_BED_SIZE 230
-  #define Y_BED_SIZE 230
+  #define X_BED_SIZE 225
+  #define Y_BED_SIZE 225
   #define Z_MAX_POS 250
 #elif ENABLED (ENDER3)
   #define X_BED_SIZE 235
